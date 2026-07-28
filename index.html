@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu — Sopatel Silmandé</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #F7F3EC; overflow-x: hidden; }
+  * { box-sizing: border-box; min-width: 0; }
+  img { max-width: 100%; }
+  a { color: #1B3A5C; text-decoration: none; }
+  a:hover { color: #B08D57; }
+  ::-webkit-scrollbar { height: 0; width: 0; }
+</style>
+</helmet>
+<div style="max-width:520px;margin:0 auto;background:#F7F3EC;color:#2A2A28;font-family:Jost,'Helvetica Neue',Helvetica,sans-serif;overflow-x:hidden">
+
+  <div style="position:relative;height:212px;background:#1B3A5C;overflow:hidden">
+    <img src="img/piscine-nuit.webp" alt="Sopatel Silmandé" width="520" height="212" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55" />
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,28,46,.35) 0%,rgba(12,28,46,.85) 100%)"></div>
+    <div style="position:relative;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:0 24px;text-align:center">
+      <img src="img/logo-carre.jpg" alt="Sopatel Silmandé" width="66" height="66" style="width:66px;height:66px;border-radius:50%;object-fit:cover;background:#fff;box-shadow:0 4px 18px rgba(0,0,0,.3)" />
+      <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:29px;line-height:1;color:#fff;letter-spacing:.04em">Sopatel Silmandé</div>
+      <div style="font-size:9.5px;letter-spacing:.34em;text-transform:uppercase;color:#D9C39C">Luxury Hotel &amp; Resort · Ouagadougou</div>
+    </div>
+  </div>
+
+  <div style="position:sticky;top:0;z-index:20;background:rgba(247,243,236,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(27,58,92,.12)">
+    <div style="display:flex;gap:0;padding:0 12px">
+      <button type="button" onClick="{{ showResto }}" style="{{ tabRestoStyle }}">Restaurant</button>
+      <button type="button" onClick="{{ showBar }}" style="{{ tabBarStyle }}">Bar</button>
+      <button type="button" onClick="{{ showHotel }}" style="{{ tabHotelStyle }}">Hôtel</button>
+    </div>
+  </div>
+
+  <sc-if value="{{ isResto }}" hint-placeholder-val="{{ true }}">
+  <div style="padding:22px 20px 8px">
+
+    <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:16px;margin:0 -20px 4px;padding-left:20px;padding-right:20px">
+      <a href="#entrees" style="flex:0 0 auto;padding:7px 14px;border:1px solid rgba(27,58,92,.22);border-radius:999px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#1B3A5C" style-hover="background:#1B3A5C;color:#fff">Entrées</a>
+      <a href="#mer" style="flex:0 0 auto;padding:7px 14px;border:1px solid rgba(27,58,92,.22);border-radius:999px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#1B3A5C" style-hover="background:#1B3A5C;color:#fff">Poissons</a>
+      <a href="#grillades" style="flex:0 0 auto;padding:7px 14px;border:1px solid rgba(27,58,92,.22);border-radius:999px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#1B3A5C" style-hover="background:#1B3A5C;color:#fff">Grillades</a>
+      <a href="#pizzas" style="flex:0 0 auto;padding:7px 14px;border:1px solid rgba(27,58,92,.22);border-radius:999px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#1B3A5C" style-hover="background:#1B3A5C;color:#fff">Pizzas &amp; pâtes</a>
+      <a href="#desserts" style="flex:0 0 auto;padding:7px 14px;border:1px solid rgba(27,58,92,.22);border-radius:999px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#1B3A5C" style-hover="background:#1B3A5C;color:#fff">Desserts</a>
+    </div>
+
+    <div id="entrees" style="scroll-margin-top:64px">
+      <div style="display:flex;align-items:center;gap:12px;margin:14px 0 6px">
+        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;color:#1B3A5C">Entrées</div>
+        <div style="flex:1 1 auto;height:1px;background:rgba(176,141,87,.45)"></div>
+      </div>
+      <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#9A937F;margin-bottom:10px">Prix en FCFA · service compris</div>
+
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Salade Silmandé</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Betteraves, carottes râpées, vinaigrette maison</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">4 500</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Avocat aux crevettes</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Sauce cocktail, citron vert</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">6 000</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Assortiment d'amuse-bouches</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Wraps, samoussas, nems, pastels — 12 pièces</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">9 000</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Soupe du jour</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Selon le marché — demandez à votre serveur</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">3 500</div>
+      </div>
+
+      <div style="margin:18px 0 6px;border-radius:4px;overflow:hidden;position:relative">
+        <img src="img/wraps.jpg" alt="Assortiment d'amuse-bouches" loading="lazy" width="480" height="210" style="display:block;width:100%;height:190px;object-fit:cover" />
+        <div style="position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;background:linear-gradient(180deg,transparent,rgba(12,28,46,.8));color:#fff;font-size:12px;letter-spacing:.16em;text-transform:uppercase">Plateau apéritif</div>
+      </div>
+    </div>
+
+    <div id="mer" style="scroll-margin-top:64px">
+      <div style="display:flex;align-items:center;gap:12px;margin:26px 0 10px">
+        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;color:#1B3A5C">Poissons &amp; fruits de mer</div>
+        <div style="flex:1 1 auto;height:1px;background:rgba(176,141,87,.45)"></div>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Capitaine à la crème de tomate</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Riz parfumé, citron vert, épinards</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">11 000</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Plateau de fruits de mer grillés</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Gambas, calamars, crevettes — pour deux</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">12 000</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Gambas sautées à l'ail</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Beurre persillé, légumes croquants</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">13 500</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Filet de tilapia braisé</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Attiéké ou alloco, sauce piment doux</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">9 500</div>
+      </div>
+
+      <div style="margin:18px 0 6px;border-radius:4px;overflow:hidden;position:relative">
+        <img src="img/poisson.jpg" alt="Capitaine à la crème de tomate" loading="lazy" width="480" height="210" style="display:block;width:100%;height:190px;object-fit:cover" />
+        <div style="position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;background:linear-gradient(180deg,transparent,rgba(12,28,46,.8));color:#fff;font-size:12px;letter-spacing:.16em;text-transform:uppercase">Signature de la maison</div>
+      </div>
+    </div>
+
+    <div id="grillades" style="scroll-margin-top:64px">
+      <div style="display:flex;align-items:center;gap:12px;margin:26px 0 10px">
+        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;color:#1B3A5C">Grillades</div>
+        <div style="flex:1 1 auto;height:1px;background:rgba(176,141,87,.45)"></div>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Brochettes de poulet</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Marinade citron-gingembre, frites maison</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">8 000</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Entrecôte grillée</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Sauce poivre ou beurre maître d'hôtel</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">14 000</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Poulet bicyclette rôti</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Demi-poulet, riz gras ou attiéké</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">9 000</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Côtelettes d'agneau</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Légumes de saison, jus corsé</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">15 000</div>
+      </div>
+
+      <div style="margin:18px 0 6px;border-radius:4px;overflow:hidden;position:relative">
+        <img src="img/brochettes.jpg" alt="Brochettes grillées" loading="lazy" width="480" height="210" style="display:block;width:100%;height:190px;object-fit:cover" />
+        <div style="position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;background:linear-gradient(180deg,transparent,rgba(12,28,46,.8));color:#fff;font-size:12px;letter-spacing:.16em;text-transform:uppercase">Grill au bord de la piscine</div>
+      </div>
+    </div>
+
+    <div id="pizzas" style="scroll-margin-top:64px">
+      <div style="display:flex;align-items:center;gap:12px;margin:26px 0 10px">
+        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;color:#1B3A5C">Pizzas &amp; pâtes</div>
+        <div style="flex:1 1 auto;height:1px;background:rgba(176,141,87,.45)"></div>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Pizza Silmandé</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Fruits de mer, champignons, anchois, olives</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">8 500</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Pizza Margherita</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Tomate, mozzarella, basilic frais</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">6 500</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Spaghetti bolognaise</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Parmesan, huile d'olive</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">7 000</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Tagliatelles aux gambas</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Crème légère, tomates confites</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">10 500</div>
+      </div>
+    </div>
+
+    <div id="desserts" style="scroll-margin-top:64px">
+      <div style="display:flex;align-items:center;gap:12px;margin:26px 0 10px">
+        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;color:#1B3A5C">Desserts</div>
+        <div style="flex:1 1 auto;height:1px;background:rgba(176,141,87,.45)"></div>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Mousse au chocolat</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Copeaux de chocolat blanc</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">3 500</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Tarte aux fruits frais</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Mangue, ananas, papaye</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">3 000</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Salade de fruits de saison</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Coupée à la minute</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">2 500</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+        <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Assiette de pâtisseries</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Sélection du chef pâtissier</div></div>
+        <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">4 000</div>
+      </div>
+
+      <div style="margin:18px 0 6px;border-radius:4px;overflow:hidden;position:relative">
+        <img src="img/desserts.jpg" alt="Pâtisseries" loading="lazy" width="480" height="210" style="display:block;width:100%;height:190px;object-fit:cover" />
+        <div style="position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;background:linear-gradient(180deg,transparent,rgba(12,28,46,.8));color:#fff;font-size:12px;letter-spacing:.16em;text-transform:uppercase">Buffet de desserts</div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isBar }}" hint-placeholder-val="{{ false }}">
+  <div style="padding:22px 20px 8px">
+    <div style="border-radius:4px;overflow:hidden;position:relative;margin-bottom:6px">
+      <img src="img/bar.jpg" alt="Bar Wango" loading="lazy" width="480" height="210" style="display:block;width:100%;height:186px;object-fit:cover" />
+      <div style="position:absolute;left:0;right:0;bottom:0;padding:30px 14px 12px;background:linear-gradient(180deg,transparent,rgba(12,28,46,.85))">
+        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;color:#fff">Bar Wango</div>
+        <div style="font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#D9C39C">Ouvert de 10h à minuit</div>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:12px;margin:24px 0 10px">
+      <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;color:#1B3A5C">Cocktails</div>
+      <div style="flex:1 1 auto;height:1px;background:rgba(176,141,87,.45)"></div>
+    </div>
+    <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#9A937F;margin-bottom:10px">Prix en FCFA</div>
+    <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+      <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Silmandé Sunset</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Rhum, mangue, citron vert, gingembre</div></div>
+      <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">6 000</div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+      <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Mojito</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Menthe fraîche, rhum blanc</div></div>
+      <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">5 500</div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+      <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Cocktail sans alcool Wango</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Bissap, ananas, fruits de la passion</div></div>
+      <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">3 500</div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:12px;margin:24px 0 10px">
+      <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;color:#1B3A5C">Bières &amp; vins</div>
+      <div style="flex:1 1 auto;height:1px;background:rgba(176,141,87,.45)"></div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+      <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Bière locale pression</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">50 cl</div></div>
+      <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">2 000</div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+      <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Bière importée</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">33 cl</div></div>
+      <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">2 500</div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+      <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Vin au verre</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Rouge, blanc ou rosé</div></div>
+      <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">4 000</div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+      <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Bouteille de vin</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Carte disponible auprès du barman</div></div>
+      <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">dès 18 000</div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:12px;margin:24px 0 10px">
+      <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;color:#1B3A5C">Sans alcool</div>
+      <div style="flex:1 1 auto;height:1px;background:rgba(176,141,87,.45)"></div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+      <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Jus de fruits frais</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Mangue, orange, ananas, bissap</div></div>
+      <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">2 500</div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+      <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Soda</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">33 cl</div></div>
+      <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">1 500</div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+      <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Café, thé, chocolat chaud</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Expresso, allongé ou au lait</div></div>
+      <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">1 500</div>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isHotel }}" hint-placeholder-val="{{ false }}">
+  <div style="padding:22px 20px 8px">
+    <div style="border-radius:4px;overflow:hidden;position:relative;margin-bottom:6px">
+      <img src="img/piscine-jour.jpg" alt="Sopatel Silmandé" loading="lazy" width="480" height="210" style="display:block;width:100%;height:186px;object-fit:cover" />
+      <div style="position:absolute;left:0;right:0;bottom:0;padding:30px 14px 12px;background:linear-gradient(180deg,transparent,rgba(12,28,46,.85))">
+        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;color:#fff">L'hôtel</div>
+        <div style="font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#D9C39C">Restauration, services &amp; loisirs</div>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:12px;margin:24px 0 12px">
+      <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;color:#1B3A5C">Nos tables</div>
+      <div style="flex:1 1 auto;height:1px;background:rgba(176,141,87,.45)"></div>
+    </div>
+
+    <div style="display:grid;gap:14px">
+      <div style="display:flex;gap:14px;align-items:center;background:#fff;border:1px solid rgba(27,58,92,.09);border-radius:4px;padding:12px">
+        <img src="img/maze.png" alt="Le Mazé" loading="lazy" width="86" height="86" style="flex:0 0 auto;width:86px;height:86px;object-fit:cover;border-radius:3px" />
+        <div style="flex:1 1 auto">
+          <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;color:#1B3A5C">Le Mazé</div>
+          <div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Restaurant principal · buffet et à la carte</div>
+          <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#B08D57;margin-top:6px">12h – 15h · 19h – 22h30</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center;background:#fff;border:1px solid rgba(27,58,92,.09);border-radius:4px;padding:12px">
+        <img src="img/beli.png" alt="Le Beli" loading="lazy" width="86" height="86" style="flex:0 0 auto;width:86px;height:86px;object-fit:cover;border-radius:3px" />
+        <div style="flex:1 1 auto">
+          <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;color:#1B3A5C">Le Beli</div>
+          <div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Terrasse et grill au bord de la piscine</div>
+          <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#B08D57;margin-top:6px">11h – 23h</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center;background:#fff;border:1px solid rgba(27,58,92,.09);border-radius:4px;padding:12px">
+        <img src="img/wango.png" alt="Bar Wango" loading="lazy" width="86" height="86" style="flex:0 0 auto;width:86px;height:86px;object-fit:cover;border-radius:3px" />
+        <div style="flex:1 1 auto">
+          <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;color:#1B3A5C">Bar Wango</div>
+          <div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Lounge du hall · cocktails et snacks</div>
+          <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#B08D57;margin-top:6px">10h – minuit</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:12px;margin:26px 0 12px">
+      <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;color:#1B3A5C">Petit-déjeuner</div>
+      <div style="flex:1 1 auto;height:1px;background:rgba(176,141,87,.45)"></div>
+    </div>
+    <div style="border-radius:4px;overflow:hidden">
+      <img src="img/petit-dejeuner.jpg" alt="Buffet du petit-déjeuner" loading="lazy" width="480" height="200" style="display:block;width:100%;height:180px;object-fit:cover" />
+    </div>
+    <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+      <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Buffet continental &amp; africain</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">Tous les jours de 6h à 10h30 · Le Mazé</div></div>
+      <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">8 000</div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(27,58,92,.09)">
+      <div style="flex:1 1 auto"><div style="font-weight:500;font-size:16px;line-height:1.25">Service en chambre</div><div style="font-size:12.5px;color:#8A8372;margin-top:3px;text-wrap:pretty">24h/24 · composez le 9</div></div>
+      <div style="flex:0 0 auto;font-weight:600;font-size:15px;color:#1B3A5C;white-space:nowrap">+ 2 000</div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:12px;margin:26px 0 12px">
+      <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;color:#1B3A5C">Services</div>
+      <div style="flex:1 1 auto;height:1px;background:rgba(176,141,87,.45)"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div style="background:#fff;border:1px solid rgba(27,58,92,.09);border-radius:4px;padding:12px 13px"><div style="font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#B08D57">Wi-Fi</div><div style="font-weight:500;font-size:14px;margin-top:5px">Gratuit · réseau Silmande</div></div>
+      <div style="background:#fff;border:1px solid rgba(27,58,92,.09);border-radius:4px;padding:12px 13px"><div style="font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#B08D57">Piscine</div><div style="font-weight:500;font-size:14px;margin-top:5px">7h – 20h</div></div>
+      <div style="background:#fff;border:1px solid rgba(27,58,92,.09);border-radius:4px;padding:12px 13px"><div style="font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#B08D57">Réception</div><div style="font-weight:500;font-size:14px;margin-top:5px">24h/24 · composez le 0</div></div>
+      <div style="background:#fff;border:1px solid rgba(27,58,92,.09);border-radius:4px;padding:12px 13px"><div style="font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#B08D57">Séminaires</div><div style="font-weight:500;font-size:14px;margin-top:5px">Salles jusqu'à 400 pers.</div></div>
+    </div>
+  </div>
+  </sc-if>
+
+  <div style="margin-top:28px;background:#1B3A5C;color:#E9E2D4;padding:26px 20px 22px;text-align:center">
+    <img src="img/logo-carre.jpg" alt="Sopatel Silmandé" loading="lazy" width="52" height="52" style="width:52px;height:52px;border-radius:50%;object-fit:cover;background:#fff" />
+    <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;color:#fff;margin-top:10px">Sopatel Silmandé</div>
+    <div style="font-size:12.5px;line-height:1.7;color:#A9BACB;margin-top:8px">Avenue de la Résistance du 17 Mai<br />Ouagadougou, Burkina Faso</div>
+    <div style="display:flex;gap:10px;justify-content:center;margin-top:16px;flex-wrap:wrap">
+      <a href="tel:+22625306060" style="padding:9px 16px;border:1px solid rgba(217,195,156,.5);border-radius:999px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#D9C39C" style-hover="background:#D9C39C;color:#1B3A5C">Appeler</a>
+      <a href="https://sopatelsilmande.com" style="padding:9px 16px;border:1px solid rgba(217,195,156,.5);border-radius:999px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#D9C39C" style-hover="background:#D9C39C;color:#1B3A5C">Site web</a>
+    </div>
+    <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#6E88A2;margin-top:22px">Réalisé par Promethee Technologies</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:844}}">
+class Component extends DCLogic {
+  state = { tab: "resto" };
+  tabStyle(on) {
+    return "flex:1 1 0;padding:14px 4px 12px;background:none;border:0;border-bottom:2px solid " +
+      (on ? "#B08D57" : "transparent") +
+      ";font-family:Jost,Helvetica,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;color:" +
+      (on ? "#1B3A5C" : "#9A937F") + ";font-weight:" + (on ? "600" : "400");
+  }
+  go(tab) { this.setState({ tab: tab }); window.scrollTo(0, 0); }
+  renderVals() {
+    const t = this.state.tab;
+    return {
+      isResto: t === "resto", isBar: t === "bar", isHotel: t === "hotel",
+      tabRestoStyle: this.tabStyle(t === "resto"),
+      tabBarStyle: this.tabStyle(t === "bar"),
+      tabHotelStyle: this.tabStyle(t === "hotel"),
+      showResto: () => this.go("resto"),
+      showBar: () => this.go("bar"),
+      showHotel: () => this.go("hotel")
+    };
+  }
+}
+</script>
+</body>
+</html>
