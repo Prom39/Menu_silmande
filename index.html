@@ -18,7 +18,7 @@
 <link rel="preload" as="font" type="font/woff2" href="font/cormorant.woff2" crossorigin>
 <link rel="preload" as="image" href="img/hero.webp" fetchpriority="high">
 <link rel="preload" as="image" href="img/logo.webp" fetchpriority="high">
-<link rel="icon" href="img/logo.webp" type="image/webp">
+<link rel="icon" href="img/mark.webp" type="image/webp">
 <link rel="apple-touch-icon" href="img/icon-180.png">
 <link rel="manifest" href="manifest.webmanifest">
 
@@ -47,8 +47,8 @@ h1,h2,h3,p{margin:0}
 .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;background:none}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,28,46,.35),rgba(12,28,46,.85))}
 .hero-in{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:0 24px;text-align:center}
-.mark{width:66px;height:66px;border-radius:50%;object-fit:cover;background:#fff;box-shadow:0 4px 18px rgba(0,0,0,.3)}
-.brand{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:29px;line-height:1;color:#fff;letter-spacing:.04em}
+.brand{margin:0;line-height:0}
+.brand img{width:min(72vw,286px);height:auto;background:none;filter:drop-shadow(0 2px 10px rgba(0,0,0,.35))}
 .kicker{font-size:9.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--sand)}
 
 /* ---------- onglets ---------- */
@@ -104,9 +104,8 @@ figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;back
 
 /* ---------- pied de page ---------- */
 footer{margin-top:28px;background:var(--navy);color:#E9E2D4;padding:26px 20px 22px;text-align:center}
-footer img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:#fff;margin:0 auto}
-.fname{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:21px;color:#fff;margin-top:10px}
-.addr{font-size:12.5px;line-height:1.7;color:#A9BACB;margin-top:8px}
+footer img{width:min(52vw,208px);height:auto;background:none;margin:0 auto}
+.addr{font-size:12.5px;line-height:1.7;color:#A9BACB;margin-top:14px}
 .acts{display:flex;gap:10px;justify-content:center;margin-top:16px;flex-wrap:wrap}
 .act{padding:9px 16px;border:1px solid rgba(217,195,156,.5);border-radius:999px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--sand)}
 .act:hover,.act:active{background:var(--sand);color:var(--navy)}
@@ -121,9 +120,8 @@ footer img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:
   <header class="hero">
     <img src="img/hero.webp" alt="" width="639" height="261" fetchpriority="high" decoding="sync">
     <div class="hero-in">
-      <img class="mark" src="img/logo.webp" alt="Sopatel Silmandé" width="66" height="66" fetchpriority="high" decoding="sync">
-      <h1 class="brand">Sopatel Silmandé</h1>
-      <p class="kicker">Luxury Hotel &amp; Resort · Ouagadougou</p>
+      <h1 class="brand"><img src="img/logo.webp" alt="Sopatel Silmandé — Luxury Hotel &amp; Resort" width="640" height="252" fetchpriority="high" decoding="sync"></h1>
+      <p class="kicker">Ouagadougou · Burkina Faso</p>
     </div>
   </header>
 
@@ -311,8 +309,7 @@ footer img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:
   </div>
 
   <footer>
-    <img src="img/logo.webp" alt="" width="52" height="52" loading="lazy" decoding="async">
-    <p class="fname">Sopatel Silmandé</p>
+    <img src="img/logo.webp" alt="Sopatel Silmandé" width="640" height="252" loading="lazy" decoding="async">
     <p class="addr">Avenue de la Résistance du 17 Mai<br>Ouagadougou, Burkina Faso</p>
     <div class="acts">
       <a class="act" href="tel:+22625306060">Appeler</a>

@@ -4,7 +4,7 @@
    - HTML  : réseau d'abord (prix toujours à jour), cache en secours.
    - Assets: cache d'abord (images, polices — immuables), réseau en secours.
    Incrémenter VERSION à chaque mise à jour des images ou des polices. */
-var VERSION = "silmande-v1";
+var VERSION = "silmande-v2";
 var ASSETS = [
   "./",
   "./index.html",
@@ -12,6 +12,7 @@ var ASSETS = [
   "./font/cormorant.woff2",
   "./img/hero.webp",
   "./img/logo.webp",
+  "./img/mark.webp",
   "./img/wraps.webp",
   "./img/poisson.webp",
   "./img/brochettes.webp",
