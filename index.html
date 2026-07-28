@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr" data-tab="resto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Menu — Sopatel Silmandé</title>
+<meta name="description" content="Carte du restaurant, du Bar Wango et services de l'hôtel Sopatel Silmandé, Ouagadougou. Entrées, poissons, grillades, pizzas, desserts et cocktails.">
+<meta name="theme-color" content="#1B3A5C">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://sopatelsilmande.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Menu — Sopatel Silmandé">
+<meta property="og:description" content="Carte du restaurant, du Bar Wango et services de l'hôtel Sopatel Silmandé, Ouagadougou.">
+<meta property="og:image" content="img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" as="font" type="font/woff2" href="font/jost.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="font/cormorant.woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero.webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/logo.webp" fetchpriority="high">
+<link rel="icon" href="img/logo.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+
+<style>
+@font-face{font-family:Jost;src:url(font/jost.woff2) format("woff2");font-weight:300 600;font-style:normal;font-display:swap}
+@font-face{font-family:"Cormorant Garamond";src:url(font/cormorant.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
+
+:root{--bg:#F7F3EC;--ink:#2A2A28;--navy:#1B3A5C;--gold:#B08D57;--sand:#D9C39C;--mut:#8A8372;--faint:#9A937F;--line:rgba(27,58,92,.09);--ph:#E4DFD4}
+*{box-sizing:border-box;min-width:0}
+html{-webkit-text-size-adjust:100%}
+html,body{margin:0;padding:0;background:var(--bg);overflow-x:hidden}
+body{font-family:Jost,"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);font-synthesis-weight:none}
+img{max-width:100%;display:block;background:var(--ph)}
+a{color:var(--navy);text-decoration:none}
+ul{list-style:none;margin:0;padding:0}
+h1,h2,h3,p{margin:0}
+::-webkit-scrollbar{height:0;width:0}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+.wrap{max-width:520px;margin:0 auto;background:var(--bg);overflow-x:hidden}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:212px;background:#1B3A5C 50%/cover no-repeat;overflow:hidden;
+  background-image:url("data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAAAQBACdASoYAAoAPsFOoEqnpCMhsAgA8BgJZACdMoACYDBdRyJvh15yAAD+5s93wyztlSSBkmoi/PpgxnnvAmgNngLmSOs9s1LM+bvV7BlGPp94g08J43bkqj5FONTNsnQNjg/6yv95zf11N7V8P5jcBYCi9aeezDJUzHhkfjnyAFhHPXc2cEZrRDMqbp2PViJ7TyrpuXSQ+P/zbD3aMjvOp64+/j1czfWzqAAA")}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;background:none}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,28,46,.35),rgba(12,28,46,.85))}
+.hero-in{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:0 24px;text-align:center}
+.mark{width:66px;height:66px;border-radius:50%;object-fit:cover;background:#fff;box-shadow:0 4px 18px rgba(0,0,0,.3)}
+.brand{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:29px;line-height:1;color:#fff;letter-spacing:.04em}
+.kicker{font-size:9.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--sand)}
+
+/* ---------- onglets ---------- */
+.tabbar{position:sticky;top:0;z-index:20;background:rgba(247,243,236,.96);border-bottom:1px solid rgba(27,58,92,.12)}
+@supports (backdrop-filter:blur(8px)){.tabbar{backdrop-filter:blur(8px)}}
+.tabs{display:flex;padding:0 12px}
+.tab{flex:1 1 0;padding:14px 4px 12px;background:none;border:0;border-bottom:2px solid transparent;font-family:inherit;font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;color:var(--faint);font-weight:400}
+.tab[aria-selected="true"]{border-bottom-color:var(--gold);color:var(--navy);font-weight:600}
+.panel{display:none;padding:22px 20px 8px}
+html[data-tab="resto"] #panel-resto,html[data-tab="bar"] #panel-bar,html[data-tab="hotel"] #panel-hotel{display:block}
+
+/* ---------- raccourcis ---------- */
+.chips{display:flex;gap:8px;overflow-x:auto;margin:0 -20px 4px;padding:0 20px 16px;-webkit-overflow-scrolling:touch}
+.chip{flex:0 0 auto;padding:7px 14px;border:1px solid rgba(27,58,92,.22);border-radius:999px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);white-space:nowrap}
+.chip:hover,.chip:active{background:var(--navy);color:#fff}
+
+/* ---------- sections ---------- */
+section[id]{scroll-margin-top:64px;content-visibility:auto;contain-intrinsic-size:auto 700px}
+.head{display:flex;align-items:center;gap:12px;margin:26px 0 10px}
+.head:first-child{margin-top:14px}
+h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:25px;line-height:1.15;color:var(--navy)}
+.head::after{content:"";flex:1 1 auto;height:1px;background:rgba(176,141,87,.45)}
+.note{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+
+.it{display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line)}
+.it>div{flex:1 1 auto}
+.n{font-weight:500;font-size:16px;line-height:1.25}
+.d{font-size:12.5px;color:var(--mut);margin-top:3px;text-wrap:pretty}
+.p{flex:0 0 auto;font-weight:600;font-size:15px;color:var(--navy);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* ---------- images ---------- */
+figure{margin:18px 0 6px;border-radius:4px;overflow:hidden;position:relative}
+figure img{width:100%;height:190px;object-fit:cover}
+figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;background:linear-gradient(180deg,transparent,rgba(12,28,46,.8));color:#fff;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.banner{margin:0 0 6px}
+.banner img{height:186px}
+.banner figcaption{padding:30px 14px 12px;background:linear-gradient(180deg,transparent,rgba(12,28,46,.85));letter-spacing:normal;text-transform:none}
+.banner .t{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:26px;color:#fff}
+.banner .s{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sand)}
+
+/* ---------- hôtel ---------- */
+.cards{display:grid;gap:14px}
+.card{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:4px;padding:12px}
+.card img{flex:0 0 auto;width:86px;height:86px;object-fit:cover;border-radius:3px}
+.card h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:21px;color:var(--navy)}
+.hours{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-top:6px}
+.bdimg{border-radius:4px;overflow:hidden;margin:0}
+.bdimg img{width:100%;height:180px;object-fit:cover}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0}
+.svc{background:#fff;border:1px solid var(--line);border-radius:4px;padding:12px 13px}
+.svc dt{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.svc dd{margin:5px 0 0;font-weight:500;font-size:14px}
+
+/* ---------- pied de page ---------- */
+footer{margin-top:28px;background:var(--navy);color:#E9E2D4;padding:26px 20px 22px;text-align:center}
+footer img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:#fff;margin:0 auto}
+.fname{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:21px;color:#fff;margin-top:10px}
+.addr{font-size:12.5px;line-height:1.7;color:#A9BACB;margin-top:8px}
+.acts{display:flex;gap:10px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+.act{padding:9px 16px;border:1px solid rgba(217,195,156,.5);border-radius:999px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--sand)}
+.act:hover,.act:active{background:var(--sand);color:var(--navy)}
+.by{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#6E88A2;margin-top:22px}
+</style>
+<script>document.documentElement.dataset.tab=/^#(bar|hotel)$/.test(location.hash)?location.hash.slice(1):"resto"</script>
+<noscript><style>.panel{display:block!important}.tabbar{display:none}</style></noscript>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <img src="img/hero.webp" alt="" width="639" height="261" fetchpriority="high" decoding="sync">
+    <div class="hero-in">
+      <img class="mark" src="img/logo.webp" alt="Sopatel Silmandé" width="66" height="66" fetchpriority="high" decoding="sync">
+      <h1 class="brand">Sopatel Silmandé</h1>
+      <p class="kicker">Luxury Hotel &amp; Resort · Ouagadougou</p>
+    </div>
+  </header>
+
+  <div class="tabbar">
+    <div class="tabs" role="tablist" aria-label="Sections du menu">
+      <button class="tab" type="button" role="tab" id="tab-resto" aria-controls="panel-resto" aria-selected="true">Restaurant</button>
+      <button class="tab" type="button" role="tab" id="tab-bar" aria-controls="panel-bar" aria-selected="false">Bar</button>
+      <button class="tab" type="button" role="tab" id="tab-hotel" aria-controls="panel-hotel" aria-selected="false">Hôtel</button>
+    </div>
+  </div>
+
+  <!-- ============ RESTAURANT ============ -->
+  <div class="panel" id="panel-resto" role="tabpanel" aria-labelledby="tab-resto">
+
+    <nav class="chips" aria-label="Catégories">
+      <a class="chip" href="#entrees">Entrées</a>
+      <a class="chip" href="#mer">Poissons</a>
+      <a class="chip" href="#grillades">Grillades</a>
+      <a class="chip" href="#pizzas">Pizzas &amp; pâtes</a>
+      <a class="chip" href="#desserts">Desserts</a>
+    </nav>
+
+    <section id="entrees">
+      <div class="head"><h2>Entrées</h2></div>
+      <p class="note">Prix en FCFA · service compris</p>
+      <ul>
+        <li class="it"><div><p class="n">Salade Silmandé</p><p class="d">Betteraves, carottes râpées, vinaigrette maison</p></div><span class="p">4 500</span></li>
+        <li class="it"><div><p class="n">Avocat aux crevettes</p><p class="d">Sauce cocktail, citron vert</p></div><span class="p">6 000</span></li>
+        <li class="it"><div><p class="n">Assortiment d'amuse-bouches</p><p class="d">Wraps, samoussas, nems, pastels — 12 pièces</p></div><span class="p">9 000</span></li>
+        <li class="it"><div><p class="n">Soupe du jour</p><p class="d">Selon le marché — demandez à votre serveur</p></div><span class="p">3 500</span></li>
+      </ul>
+      <figure>
+        <img src="img/wraps.webp" alt="Assortiment d'amuse-bouches" width="560" height="222" loading="lazy" decoding="async" style="background:#B19E6D">
+        <figcaption>Plateau apéritif</figcaption>
+      </figure>
+    </section>
+
+    <section id="mer">
+      <div class="head"><h2>Poissons &amp; fruits de mer</h2></div>
+      <ul>
+        <li class="it"><div><p class="n">Capitaine à la crème de tomate</p><p class="d">Riz parfumé, citron vert, épinards</p></div><span class="p">11 000</span></li>
+        <li class="it"><div><p class="n">Plateau de fruits de mer grillés</p><p class="d">Gambas, calamars, crevettes — pour deux</p></div><span class="p">12 000</span></li>
+        <li class="it"><div><p class="n">Gambas sautées à l'ail</p><p class="d">Beurre persillé, légumes croquants</p></div><span class="p">13 500</span></li>
+        <li class="it"><div><p class="n">Filet de tilapia braisé</p><p class="d">Attiéké ou alloco, sauce piment doux</p></div><span class="p">9 500</span></li>
+      </ul>
+      <figure>
+        <img src="img/poisson.webp" alt="Capitaine à la crème de tomate" width="560" height="222" loading="lazy" decoding="async" style="background:#AA845A">
+        <figcaption>Signature de la maison</figcaption>
+      </figure>
+    </section>
+
+    <section id="grillades">
+      <div class="head"><h2>Grillades</h2></div>
+      <ul>
+        <li class="it"><div><p class="n">Brochettes de poulet</p><p class="d">Marinade citron-gingembre, frites maison</p></div><span class="p">8 000</span></li>
+        <li class="it"><div><p class="n">Entrecôte grillée</p><p class="d">Sauce poivre ou beurre maître d'hôtel</p></div><span class="p">14 000</span></li>
+        <li class="it"><div><p class="n">Poulet bicyclette rôti</p><p class="d">Demi-poulet, riz gras ou attiéké</p></div><span class="p">9 000</span></li>
+        <li class="it"><div><p class="n">Côtelettes d'agneau</p><p class="d">Légumes de saison, jus corsé</p></div><span class="p">15 000</span></li>
+      </ul>
+      <figure>
+        <img src="img/brochettes.webp" alt="Brochettes grillées" width="560" height="222" loading="lazy" decoding="async" style="background:#706652">
+        <figcaption>Grill au bord de la piscine</figcaption>
+      </figure>
+    </section>
+
+    <section id="pizzas">
+      <div class="head"><h2>Pizzas &amp; pâtes</h2></div>
+      <ul>
+        <li class="it"><div><p class="n">Pizza Silmandé</p><p class="d">Fruits de mer, champignons, anchois, olives</p></div><span class="p">8 500</span></li>
+        <li class="it"><div><p class="n">Pizza Margherita</p><p class="d">Tomate, mozzarella, basilic frais</p></div><span class="p">6 500</span></li>
+        <li class="it"><div><p class="n">Spaghetti bolognaise</p><p class="d">Parmesan, huile d'olive</p></div><span class="p">7 000</span></li>
+        <li class="it"><div><p class="n">Tagliatelles aux gambas</p><p class="d">Crème légère, tomates confites</p></div><span class="p">10 500</span></li>
+      </ul>
+    </section>
+
+    <section id="desserts">
+      <div class="head"><h2>Desserts</h2></div>
+      <ul>
+        <li class="it"><div><p class="n">Mousse au chocolat</p><p class="d">Copeaux de chocolat blanc</p></div><span class="p">3 500</span></li>
+        <li class="it"><div><p class="n">Tarte aux fruits frais</p><p class="d">Mangue, ananas, papaye</p></div><span class="p">3 000</span></li>
+        <li class="it"><div><p class="n">Salade de fruits de saison</p><p class="d">Coupée à la minute</p></div><span class="p">2 500</span></li>
+        <li class="it"><div><p class="n">Assiette de pâtisseries</p><p class="d">Sélection du chef pâtissier</p></div><span class="p">4 000</span></li>
+      </ul>
+      <figure>
+        <img src="img/desserts.webp" alt="Pâtisseries" width="560" height="222" loading="lazy" decoding="async" style="background:#BD996E">
+        <figcaption>Buffet de desserts</figcaption>
+      </figure>
+    </section>
+  </div>
+
+  <!-- ============ BAR ============ -->
+  <div class="panel" id="panel-bar" role="tabpanel" aria-labelledby="tab-bar">
+    <figure class="banner">
+      <img src="img/bar.webp" alt="Bar Wango" width="620" height="240" loading="lazy" decoding="async" style="background:#845547">
+      <figcaption><span class="t">Bar Wango</span><br><span class="s">Ouvert de 10h à minuit</span></figcaption>
+    </figure>
+
+    <section id="cocktails">
+      <div class="head"><h2>Cocktails</h2></div>
+      <p class="note">Prix en FCFA</p>
+      <ul>
+        <li class="it"><div><p class="n">Silmandé Sunset</p><p class="d">Rhum, mangue, citron vert, gingembre</p></div><span class="p">6 000</span></li>
+        <li class="it"><div><p class="n">Mojito</p><p class="d">Menthe fraîche, rhum blanc</p></div><span class="p">5 500</span></li>
+        <li class="it"><div><p class="n">Cocktail sans alcool Wango</p><p class="d">Bissap, ananas, fruits de la passion</p></div><span class="p">3 500</span></li>
+      </ul>
+    </section>
+
+    <section id="vins">
+      <div class="head"><h2>Bières &amp; vins</h2></div>
+      <ul>
+        <li class="it"><div><p class="n">Bière locale pression</p><p class="d">50 cl</p></div><span class="p">2 000</span></li>
+        <li class="it"><div><p class="n">Bière importée</p><p class="d">33 cl</p></div><span class="p">2 500</span></li>
+        <li class="it"><div><p class="n">Vin au verre</p><p class="d">Rouge, blanc ou rosé</p></div><span class="p">4 000</span></li>
+        <li class="it"><div><p class="n">Bouteille de vin</p><p class="d">Carte disponible auprès du barman</p></div><span class="p">dès 18 000</span></li>
+      </ul>
+    </section>
+
+    <section id="softs">
+      <div class="head"><h2>Sans alcool</h2></div>
+      <ul>
+        <li class="it"><div><p class="n">Jus de fruits frais</p><p class="d">Mangue, orange, ananas, bissap</p></div><span class="p">2 500</span></li>
+        <li class="it"><div><p class="n">Soda</p><p class="d">33 cl</p></div><span class="p">1 500</span></li>
+        <li class="it"><div><p class="n">Café, thé, chocolat chaud</p><p class="d">Expresso, allongé ou au lait</p></div><span class="p">1 500</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- ============ HÔTEL ============ -->
+  <div class="panel" id="panel-hotel" role="tabpanel" aria-labelledby="tab-hotel">
+    <figure class="banner">
+      <img src="img/piscine.webp" alt="La piscine du Sopatel Silmandé" width="620" height="240" loading="lazy" decoding="async" style="background:#7A8774">
+      <figcaption><span class="t">L'hôtel</span><br><span class="s">Restauration, services &amp; loisirs</span></figcaption>
+    </figure>
+
+    <section id="tables">
+      <div class="head"><h2>Nos tables</h2></div>
+      <div class="cards">
+        <div class="card">
+          <img src="img/t-maze.webp" alt="Le Mazé" width="86" height="86" loading="lazy" decoding="async" style="background:#A7A281">
+          <div>
+            <h3>Le Mazé</h3>
+            <p class="d">Restaurant principal · buffet et à la carte</p>
+            <p class="hours">12h – 15h · 19h – 22h30</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/t-beli.webp" alt="Le Beli" width="86" height="86" loading="lazy" decoding="async" style="background:#756D5F">
+          <div>
+            <h3>Le Beli</h3>
+            <p class="d">Terrasse et grill au bord de la piscine</p>
+            <p class="hours">11h – 23h</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/t-wango.webp" alt="Bar Wango" width="86" height="86" loading="lazy" decoding="async" style="background:#7B6C4C">
+          <div>
+            <h3>Bar Wango</h3>
+            <p class="d">Lounge du hall · cocktails et snacks</p>
+            <p class="hours">10h – minuit</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="petit-dejeuner">
+      <div class="head"><h2>Petit-déjeuner</h2></div>
+      <figure class="bdimg">
+        <img src="img/petit-dejeuner.webp" alt="Buffet du petit-déjeuner" width="560" height="210" loading="lazy" decoding="async" style="background:#735F51">
+      </figure>
+      <ul>
+        <li class="it"><div><p class="n">Buffet continental &amp; africain</p><p class="d">Tous les jours de 6h à 10h30 · Le Mazé</p></div><span class="p">8 000</span></li>
+        <li class="it"><div><p class="n">Service en chambre</p><p class="d">24h/24 · composez le 9</p></div><span class="p">+ 2 000</span></li>
+      </ul>
+    </section>
+
+    <section id="services">
+      <div class="head"><h2>Services</h2></div>
+      <dl class="grid2">
+        <div class="svc"><dt>Wi-Fi</dt><dd>Gratuit · réseau Silmande</dd></div>
+        <div class="svc"><dt>Piscine</dt><dd>7h – 20h</dd></div>
+        <div class="svc"><dt>Réception</dt><dd>24h/24 · composez le 0</dd></div>
+        <div class="svc"><dt>Séminaires</dt><dd>Salles jusqu'à 400 pers.</dd></div>
+      </dl>
+    </section>
+  </div>
+
+  <footer>
+    <img src="img/logo.webp" alt="" width="52" height="52" loading="lazy" decoding="async">
+    <p class="fname">Sopatel Silmandé</p>
+    <p class="addr">Avenue de la Résistance du 17 Mai<br>Ouagadougou, Burkina Faso</p>
+    <div class="acts">
+      <a class="act" href="tel:+22625306060">Appeler</a>
+      <a class="act" href="https://sopatelsilmande.com" rel="noopener">Site web</a>
+    </div>
+    <p class="by">Réalisé par Promethee Technologies</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement,tabs=["resto","bar","hotel"],
+      btns=tabs.map(function(t){return document.getElementById("tab-"+t)});
+
+  function show(tab,push){
+    root.dataset.tab=tab;
+    btns.forEach(function(b,i){b.setAttribute("aria-selected",tabs[i]===tab)});
+    if(push){history.replaceState(null,"",tab==="resto"?location.pathname:"#"+tab);window.scrollTo(0,0)}
+  }
+  btns.forEach(function(b,i){
+    b.addEventListener("click",function(){show(tabs[i],true)});
+    b.addEventListener("keydown",function(e){
+      var d=e.key==="ArrowRight"?1:e.key==="ArrowLeft"?-1:0;
+      if(!d)return;
+      e.preventDefault();
+      var n=(i+d+3)%3;btns[n].focus();show(tabs[n],true);
+    });
+  });
+  show(root.dataset.tab,false);
+  addEventListener("hashchange",function(){
+    var h=location.hash.slice(1);
+    if(tabs.indexOf(h)>-1)show(h,false);
+  });
+
+  /* Précharge sans priorité les images des onglets non affichés. */
+  var idle=window.requestIdleCallback||function(f){setTimeout(f,1500)};
+  idle(function(){
+    ["img/bar.webp","img/piscine.webp","img/t-maze.webp","img/t-beli.webp","img/t-wango.webp","img/petit-dejeuner.webp"]
+      .forEach(function(u){var l=document.createElement("link");l.rel="prefetch";l.as="image";l.href=u;document.head.appendChild(l)});
+  });
+
+  if("serviceWorker" in navigator)
+    addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})});
+})();
+</script>
+</body>
+</html>
