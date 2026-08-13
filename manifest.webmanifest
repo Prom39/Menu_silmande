@@ -7,9 +7,9 @@
   "display": "standalone",
   "background_color": "#F7F3EC",
   "theme_color": "#1B3A5C",
-  "description": "Carte du restaurant, du Bar Wango et services de l'hôtel Sopatel Silmandé, Ouagadougou.",
+  "description": "Carte du restaurant Le Samandin, du Bar Le Wango et services de l'hôtel Sopatel Silmandé, Ouagadougou.",
   "icons": [
     { "src": "img/icon-180.png", "sizes": "180x180", "type": "image/png" },
-    { "src": "img/mark.webp", "sizes": "396x218", "type": "image/webp", "purpose": "any" }
+    { "src": "img/mark.webp", "sizes": "96x96", "type": "image/webp", "purpose": "any" }
   ]
 }
